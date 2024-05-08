@@ -5,14 +5,16 @@ metadata:
 spec:
   title: "Multiple Clusters"
   description: "Overview of working with multiple clusters."
+  duration: 30m
+  publish:
+    image: $(image_repository)/labs-educates-showcase/lab-multiple-clusters-files:$(workshop_version)
   workshop:
     files:
     - image:
-        url: "$(image_repository)/labs-educates-showcase-files:latest"
+        url: "$(image_repository)/labs-educates-showcase/lab-multiple-clusters-files:$(workshop_version)"
       includePaths:
-        - /workshops/lab-multiple-clusters/resources/**
-        - /workshops/lab-multiple-clusters/workshop/**
-      newRootPath: workshops/lab-multiple-clusters
+        - /resources/**
+        - /workshop/**
     - http:
         url: https://github.com/loft-sh/vcluster/releases/download/v0.14.2/vcluster-linux-amd64
       path: bin

@@ -6,11 +6,11 @@ spec:
   title: "Workshop Authoring"
   description: "Overview of authoring workshops for Educates."
   publish:
-    image: "$(image_repository)/lab-workshop-authoring-files:$(workshop_version)"
+    image: $(image_repository)/labs-educates-showcase/lab-workshop-authoring-files:$(workshop_version)
   workshop:
     files:
     - image:
-        url: "$(image_repository)/lab-workshop-authoring-files:$(workshop_version)"
+        url: "$(image_repository)/labs-educates-showcase/lab-workshop-authoring-files:$(workshop_version)"
       includePaths:
       - /workshop/**
       - /exercises/**

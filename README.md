@@ -21,3 +21,4 @@ of the Educates training platform and how it can be used. The workshops are:
 * [Managed Services](workshops/lab-managed-services) - Overview of running additional managed processes.
 * [Ingress Proxy](workshops/lab-ingress-proxy) - Overview of adding ingresses for local processes.
 * [Git Repositories](workshops/lab-git-repositories) - Overview of using local hosted Git repositories.
+* [Installing Educates](workshops/lab-installing-educates) - Overview of installing Educates using the CLI.

@@ -7,6 +7,7 @@ of the Educates training platform and how it can be used. The workshops are:
 * [Workshop Session](workshops/lab-workshop-session) - Overview of the containerized workshop environment.
 * [Session Namespace](workshops/lab-session-namespace) - Overview of Kubernetes application deployment.
 * [Virtual Cluster](workshops/lab-virtual-cluster) - Overview of optional virtual Kubernetes cluster.
+* [Multiple Clusters](workshops/lab-multiple-clusters) - Overview of working with multiple clusters.
 * [Virtual Machines](workshops/lab-virtual-machines) - Overview of provisioning virtual machines.
 * [Integrated Editor](workshops/lab-integrated-editor) - Overview of integrated VS Code editor.
 * [Slide Presentations](workshops/lab-slide-presentations) - Overview of integrating slide presentations.

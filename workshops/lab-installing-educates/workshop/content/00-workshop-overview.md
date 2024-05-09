@@ -23,9 +23,11 @@ text: |
     imageRegistry:
         host: registry.default.svc.cluster.local
 
-    #imagePuller:
-    #    prePullImages: []
+    imagePuller:
+        enabled: false
 ```
+
+Should be able to get rid of provider option but CLI not defaulting to custom right now.
 
 ```terminal:execute
 command: educates admin cluster install --config config.yaml --provider=custom

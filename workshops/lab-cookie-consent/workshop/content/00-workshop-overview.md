@@ -14,19 +14,21 @@ command: curl -L -o cookieconsent.css https://cdn.jsdelivr.net/gh/orestbida/cook
 command: curl -L -o cookieconsent.umd.js https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.umd.js
 ```
 
-Create `.css` and `.js` files for the training portal.
-
-```terminal:execute
-command: cat cookieconsent.css > training-portal.css
-```
-
-```terminal:execute
-command: cat cookieconsent.umd.js > training-portal.js
-```
+Create `.html` file to be embedded in head section of HTML files.
 
 ```terminal:execute
 command: |
-    cat << EOF >> training-portal.js
+  cat << EOF > training-portal.html
+  <link rel="stylesheet" href="/static/workshops/theme/cookieconsent.css">
+  <script type="text/javascript" src="/static/workshops/theme/cookieconsent.umd.js"></script>
+  EOF
+```
+
+Create `.js` file defining configuration for CookieConsent package.
+
+```terminal:execute
+command: |
+    cat << EOF > training-portal.js
     /**
     * All config. options available here:
     * https://cookieconsent.orestbida.com/reference/configuration-reference.html
@@ -95,8 +97,10 @@ command: kubectl create ns educates-themes
 ```
 
 ```terminal:execute
-command: kubectl create secret generic cookieconsent-theme -n educates-themes --from-file=training-portal.css --from-file=training-portal.js
+command: kubectl create secret generic cookieconsent-theme -n educates-themes --from-file=cookieconsent.css --from-file=cookieconsent.umd.js --from-file=training-portal.html --from-file=training-portal.js
 ```
+
+Create the Educates configuration including the website styling section to set the theme.
 
 ```editor:append-lines-to-file
 file: ~/config.yaml
@@ -132,13 +136,19 @@ text: |
           namespace: educates-themes
 ```
 
+Install Educates.
+
 ```terminal:execute
 command: educates admin cluster install --config config.yaml
 ```
 
+Deploy a workshop.
+
 ```terminal:execute
 command: educates deploy-workshop -f https://github.com/vmware-tanzu-labs/lab-k8s-fundamentals/releases/latest/download/workshop.yaml
 ```
+
+Access the training portal. Run a second time if the browser blocks popup the first time.
 
 ```terminal:execute
 command: educates browse-workshops

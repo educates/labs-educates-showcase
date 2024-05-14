@@ -2,6 +2,8 @@
 title: Workshop Overview
 ---
 
+Note that once `vcluster` provider config added to CLI as one of the set of opinionated configs, this can be simplified.
+
 ```editor:append-lines-to-file
 file: ~/config.yaml
 text: |
@@ -29,8 +31,6 @@ text: |
     imagePuller:
         enabled: false
 ```
-
-Should be able to get rid of provider option but CLI not defaulting to custom right now.
 
 ```terminal:execute
 command: educates admin cluster install --config config.yaml

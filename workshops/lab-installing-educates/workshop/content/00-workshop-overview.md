@@ -5,6 +5,9 @@ title: Workshop Overview
 ```editor:append-lines-to-file
 file: ~/config.yaml
 text: |
+    clusterInfrastructure:
+        provider: custom
+
     clusterPackages:
         contour:
             enabled: false
@@ -30,7 +33,7 @@ text: |
 Should be able to get rid of provider option but CLI not defaulting to custom right now.
 
 ```terminal:execute
-command: educates admin cluster install --config config.yaml --provider=custom
+command: educates admin cluster install --config config.yaml
 ```
 
 ```terminal:execute

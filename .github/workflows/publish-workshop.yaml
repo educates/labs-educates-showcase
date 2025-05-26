@@ -20,6 +20,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+        # TODO: Update to latest Educates Github Actions once multiworkshop support is available
       - name: Install Carvel tools
         shell: bash
         run: curl -L https://carvel.dev/install.sh | bash
@@ -29,7 +30,7 @@ jobs:
         run: |
           # curl -Lo /usr/local/bin/educates https://github.com/vmware-tanzu-labs/educates-training-platform/releases/download/2.6.0/educates-linux-amd64
           # chmod +x /usr/local/bin/educates
-          imgpkg pull -i ghcr.io/vmware-tanzu-labs/educates-client-programs:2.6.0 -o /tmp/client-programs
+          imgpkg pull -i ghcr.io/vmware-tanzu-labs/educates-client-programs:3.3.2 -o /tmp/client-programs
           mv /tmp/client-programs/educates-linux-amd64 /usr/local/bin/educates
 
       - name: Setup repository variables and release details

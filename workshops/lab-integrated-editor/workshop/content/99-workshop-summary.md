@@ -1,3 +1,7 @@
+---
+title: Workshop Summary
+---
+
 This is the end of the workshop. The Educates workshop resource definition for
 this workshop can be viewed by clicking:
 

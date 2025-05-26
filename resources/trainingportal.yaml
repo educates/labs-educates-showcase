@@ -36,3 +36,5 @@ spec:
     - name: lab-managed-services
     - name: lab-ingress-proxy
     - name: lab-git-repositories
+    - name: lab-cookie-consent
+    - name: lab-multiple-clusters

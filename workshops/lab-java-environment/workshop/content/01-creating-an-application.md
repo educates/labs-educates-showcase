@@ -1,6 +1,6 @@
-+++
-title = 'Creating an application'
-+++
+---
+title: Creating an application
+---
 
 During this workshop we will be using the command line as well as the embedded editor. The editor takes a few moments to start up and be ready, so select the **Editor** tab now to display it, or click on the action block below.
 

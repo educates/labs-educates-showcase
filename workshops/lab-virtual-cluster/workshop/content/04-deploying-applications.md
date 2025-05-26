@@ -14,9 +14,9 @@ Then deploy the application:
 ```terminal:execute
 command: |-
     ytt -f frontend \
-        -v SESSION_NAMESPACE={{session_namespace}} \
-        -v INGRESS_DOMAIN={{ingress_domain}} \
-        -v POLICY_ENGINE={{policy_engine}} | \
+        -v SESSION_NAMESPACE={{< param session_namespace}} \
+        -v INGRESS_DOMAIN={{< param ingress_domain}} \
+        -v POLICY_ENGINE={{< param policy_engine}} | \
     kapp deploy -n my-app -a frontend -f - -y
 ```
 
@@ -28,14 +28,14 @@ prefix: Console
 title: View deployment for "blog"
 description: ""
 name: Console
-url: {{ingress_protocol}}://console-{{session_namespace}}.{{ingress_domain}}/#/deployment/my-app/blog?namespace=my-app
+url: {{< param ingress_protocol}}://console-{{< param session_namespace}}.{{< param ingress_domain}}/#/deployment/my-app/blog?namespace=my-app
 ```
 
 Once the deployment has completed, you can test access to the application
 by running:
 
 ```terminal:execute
-command: curl http://blog-{{session_namespace}}.{{ingress_domain}}/
+command: curl http://blog-{{< param session_namespace}}.{{< param ingress_domain}}/
 ```
 
 Note that although we are operating in the context of a virtual cluster, we can
@@ -47,7 +47,7 @@ name of workshop session when placed immediately under the ingress domain used
 by Educates. Here for example we used:
 
 ```
-blog-{{session_namespace}}.{{ingress_domain}}
+blog-{{< param session_namespace}}.{{< param ingress_domain}}
 ```
 
 as the hostname in the ingress.
@@ -55,8 +55,8 @@ as the hostname in the ingress.
 Alternatively, one can create new hosts under the special ingress domains:
 
 ```
-{{session_namespace}}.{{ingress_domain}}
-default.{{session_namespace}}.{{ingress_domain}}
+{{< param session_namespace}}.{{< param ingress_domain}}
+default.{{< param session_namespace}}.{{< param ingress_domain}}
 ```
 
 If necessary, additional subdomains in addition to `default` can be declared

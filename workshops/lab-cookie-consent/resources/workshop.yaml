@@ -19,7 +19,7 @@ spec:
     - name: educates
       files:
       - image:
-          url: $(oci_image_cache)/educates-client-programs:installer-clean
+          url: $(oci_image_cache)/educates:v3.3.2
         path: bin
         includePaths:
         - educates-linux-$(platform_arch)
@@ -171,8 +171,8 @@ spec:
     images:
       registries:
       - content:
-        - destination: /educates-client-programs
-          prefix: /jorgemoralespou/educates-client-programs
+        - destination: /educates
+          prefix: /educates/educates-extension-packages/educates
           stripPrefix: true
         onDemand: true
         urls:

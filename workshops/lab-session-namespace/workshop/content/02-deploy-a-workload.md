@@ -1,6 +1,6 @@
-+++
-title = 'Deploy a Workload'
-+++
+---
+title: Deploy a Workload
+---
 
 To verify access to the session namespace and ensure we can deploy a workload,
 lets deploy a simple blog application.

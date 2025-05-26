@@ -1,6 +1,6 @@
-+++
-title = 'Cluster Ingress'
-+++
+---
+title: Cluster Ingress
+---
 
 With the deployment completed, test access to the application by running:
 

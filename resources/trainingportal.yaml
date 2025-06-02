@@ -5,6 +5,9 @@ metadata:
 spec:
   portal:
     title: Educates Showcase
+    description: |-
+      Educates Showcase
+      NOTE: Some of these workshops require kapp-controller to be installed on the cluster
     registration:
       type: anonymous
     updates:

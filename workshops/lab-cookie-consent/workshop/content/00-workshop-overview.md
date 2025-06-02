@@ -145,7 +145,7 @@ command: educates admin cluster install --config config.yaml
 Deploy a workshop.
 
 ```terminal:execute
-command: educates deploy-workshop -f https://github.com/vmware-tanzu-labs/lab-k8s-fundamentals/releases/latest/download/workshop.yaml
+command: educates deploy-workshop -f https://github.com/educates/lab-k8s-fundamentals/releases/latest/download/workshop.yaml
 ```
 
 Access the training portal. Run a second time if the browser blocks popup the first time.

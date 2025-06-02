@@ -19,7 +19,7 @@ spec:
           - /exercises/**
       - path: .m2
         image:
-          url: ghcr.io/vmware-tanzu-labs/lab-spring-boot-on-k8s-maven:latest
+          url: ghcr.io/educates/lab-spring-boot-on-k8s-maven:latest
   session:
     namespaces:
       budget: large
@@ -61,7 +61,7 @@ spec:
             spec:
               containers:
                 - name: dashboard
-                  image: ghcr.io/vmware-tanzu-labs/educates-spring-initializr:2.2.0
+                  image: ghcr.io/educates/educates-spring-initializr:2.2.0
                   imagePullPolicy: Always
                   ports:
                     - name: 8080-tcp

@@ -1,6 +1,6 @@
-+++
-title = 'Terminal Environment'
-+++
+---
+title: Terminal Environment
+---
 
 The Educates training platform is designed to be run in a Kubernetes cluster.
 When a workshop is accessed a distinct Kubernetes deployment is created to host

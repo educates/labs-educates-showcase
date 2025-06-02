@@ -1,6 +1,6 @@
-+++
-title = 'Session Lifecycle'
-+++
+---
+title: Session Lifecycle
+---
 
 The duration of training workshops would normally be time limited. This duration
 can be fixed, or requests for time extensions up to a maximum can be enabled. An

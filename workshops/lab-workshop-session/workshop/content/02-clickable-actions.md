@@ -1,6 +1,6 @@
-+++
-title = 'Clickable Actions'
-+++
+---
+title: Clickable Actions
+---
 
 Workshop instructions can be scripted with the details of commands a user should
 execute in the terminals. These can be displayed as code blocks, with the user

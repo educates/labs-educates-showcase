@@ -20,14 +20,14 @@ training platform can be found at:
 url: https://github.com/educates/labs-educates-showcase
 ```
 
-For more workshops demonstrating different ways of using virtual clusters see:
-
-```dashboard:open-url
-url: https://github.com/educates/labs-vcluster-testing
-```
-
 Documentation for Educates can be found at:
 
 ```dashboard:open-url
 url: https://docs.educates.dev/
+```
+
+For more workshops demonstrating different ways of using virtual clusters see:
+
+```dashboard:open-url
+url: https://github.com/educates/labs-vcluster-testing
 ```

@@ -2,6 +2,8 @@
 title: Creating an application
 ---
 
+This workshop shows some of the capabilities of the Java based images, which come with Java, Maven and Gradle built in.
+
 During this workshop we will be using the command line as well as the embedded editor. The editor takes a few moments to start up and be ready, so select the **Editor** tab now to display it, or click on the action block below.
 
 ```dashboard:open-dashboard

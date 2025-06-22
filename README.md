@@ -1,7 +1,7 @@
 Educates Showcase
 =================
 
-This repository contains a set of workshops which demonstrates the capabilities
+This repository contains a set of really short workshops which demonstrates the capabilities
 of the Educates training platform and how it can be used. The workshops are:
 
 * [Workshop Session](workshops/lab-workshop-session) - Overview of the containerized workshop environment.
@@ -11,7 +11,7 @@ of the Educates training platform and how it can be used. The workshops are:
 * [Virtual Machines](workshops/lab-virtual-machines) - Overview of provisioning virtual machines.
 * [Integrated Editor](workshops/lab-integrated-editor) - Overview of integrated VS Code editor.
 * [Slide Presentations](workshops/lab-slide-presentations) - Overview of integrating slide presentations.
-* [Docker Runtime](workshops/lab-docker-runtime) - Overview of deploying applications using docker.
+* [Docker Runtime](workshops/lab-docker-runtime) - Overview of using Docker within Educates workshop.
 * [Examiner Scripts](workshops/lab-examiner-scripts) - Overview of using self check examinations.
 * [Java Environment](workshops/lab-java-environment) - Overview of working on Java applications.
 * [Conda Environment](workshops/lab-conda-environment) - Overview of working on Python applications.

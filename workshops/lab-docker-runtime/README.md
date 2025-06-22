@@ -1,3 +1,3 @@
 # Docker Runtime
 
-Overview of deploying applications using docker.
+Overview of using Docker within Educates.

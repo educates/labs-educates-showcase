@@ -1,6 +1,6 @@
-+++
-title = 'Building the application'
-+++
+---
+title: Building the application
+---
 
 We are now ready to build the application source code. We will first do this direct into the local directory.
 

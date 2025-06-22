@@ -1,11 +1,11 @@
-+++
-title = 'Cluster Ingress'
-+++
+---
+title: Cluster Ingress
+---
 
 With the deployment completed, test access to the application by running:
 
 ```terminal:execute
-command: curl http://blog-{{< param session_namespace >}}.{{< param session_name >}}/
+command: curl http://blog-{{< param session_namespace >}}.{{< param ingress_domain >}}/
 ```
 
 If this fails, keep running it as depending on the cluster and infrastructure

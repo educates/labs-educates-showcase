@@ -1,6 +1,6 @@
-+++
-title = 'Deleting a pod'
-+++
+---
+title: Deleting a pod
+---
 
 In this task you are required to delete the pod named "one" that you previously created.
 

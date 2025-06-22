@@ -1,3 +1,7 @@
+---
+title: Namespace vs Cluster
+---
+
 Making use of the fact that Educates runs in a Kubernetes cluster, where a
 workshop is about deploying workloads to Kubernetes, the default way of allowing
 a workshop user to deploy to the cluster is to provide them access to a single

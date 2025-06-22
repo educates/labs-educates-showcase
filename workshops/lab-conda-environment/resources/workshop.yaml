@@ -21,6 +21,9 @@ spec:
       security:
         token:
           enabled: false
+    resources:
+      memory: 1Gi
+      storage: 5Gi
     applications:
       terminal:
         enabled: true
@@ -29,3 +32,12 @@ spec:
         enabled: true
       editor:
         enabled: true
+    env:
+      - name: ENABLE_JUPYTERLAB
+        value: "true"
+    ingresses:
+      - name: jupyterlab
+        port: 8888
+    dashboards:
+    - name: JupyterLab
+      url: "$(ingress_protocol)://$(session_namespace)-jupyterlab.$(ingress_domain)/"    

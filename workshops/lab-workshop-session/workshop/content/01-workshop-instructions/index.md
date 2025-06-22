@@ -1,6 +1,6 @@
-+++
-title = 'Workshop Instructions'
-+++
+---
+title: Workshop Instructions
+---
 
 A specific hosted workshop can be selected via the Educates training portal web
 interface, or a distinct custom web portal, which interacts with the Educates

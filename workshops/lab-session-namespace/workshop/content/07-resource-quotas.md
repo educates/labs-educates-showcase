@@ -1,6 +1,6 @@
-+++
-title = 'Resource Quotas'
-+++
+---
+title: Resource Quotas
+---
 
 Any workload deployed to the session namespace will have certain resources
 requirements. If not constrained, or if no restrictions are placed on how much

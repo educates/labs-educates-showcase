@@ -1,6 +1,6 @@
-+++
-title = 'Deploying a pod'
-+++
+---
+title: Deploying a pod
+---
 
 In this this task you are required to deploy a pod. The name of the pod must be "one".
 

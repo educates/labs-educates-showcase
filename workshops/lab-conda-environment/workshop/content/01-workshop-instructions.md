@@ -1,1 +1,22 @@
-This is the first page of the workshop instructions, create as many separate pages as you need to. If necessary pages can be located in sub directories to provided grouping.
+---
+title: Workshop Instructions
+---
+
+In order to use this image, your workshop definition will have to be configured 
+to use the `conda-environment` base image:
+
+```yaml
+...
+spec:
+  description: "Overview of working on Python applications."
+  ...
+  workshop:
+    image: conda-environment:*
+...
+```
+
+You can verify conda version that by running:
+
+```execute
+conda --version
+```

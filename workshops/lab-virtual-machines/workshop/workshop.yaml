@@ -1,7 +1,0 @@
-name: "Virtual Machines"
-
-modules:
-  activate:
-  - 00-workshop-overview
-  - 01-workshop-instructions
-  - 99-workshop-summary

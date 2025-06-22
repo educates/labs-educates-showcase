@@ -1,6 +1,6 @@
-+++
-title = 'Workshop Overview'
-+++
+---
+title: Workshop Overview
+---
 
 The Educates training platform is a Kubernetes native application which provides
 time limited sandboxes for hosted workshop environments.

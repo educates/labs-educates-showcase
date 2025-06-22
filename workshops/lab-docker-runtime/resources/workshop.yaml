@@ -4,7 +4,7 @@ metadata:
   name: "lab-docker-runtime"
 spec:
   title: "Docker Runtime"
-  description: "Overview of deploying applications using docker."
+  description: "Overview of running Docker in Educates"
   duration: 30m
   publish:
     image: $(image_repository)/labs-educates-showcase/lab-docker-runtime-files:$(workshop_version)

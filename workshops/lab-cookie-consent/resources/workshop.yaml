@@ -12,17 +12,16 @@ spec:
     - image:
         url: "$(image_repository)/labs-educates-showcase/lab-cookie-consent-files:$(workshop_version)"
       includePaths:
+      - /resources/**      
       - /workshop/**
       - /exercises/**
       - /README.md
     packages:
     - name: educates
       files:
-      - image:
-          url: $(oci_image_cache)/educates-client-programs:installer-clean
-        path: bin
-        includePaths:
-        - educates-linux-$(platform_arch)
+      - path: .
+        image:
+          url: $(oci_image_cache)/educates:v3.3.2
   session:
     namespaces:
       budget: x-large
@@ -36,29 +35,18 @@ spec:
         layout: split
       editor:
         enabled: true
-      console:
-        enabled: false
-      docker:
-        enabled: true
-        socket:
-          enabled: false
-        compose:
-          services:
-            registry:
-              image: registry:2.8.3
-              ports:
-              - "0.0.0.0:5001:5000"
-      registry:
-        enabled: false
-      vcluster:
-        enabled: false
+      files:
+        enabled: true              
     volumes:
-    - name: admin-credentials-config
+    - name: admin-vcluster-kubeconfig
       secret:
         secretName: $(session_name)-kubeconfig
     volumeMounts:
-    - name: admin-credentials-config
+    - name: admin-vcluster-kubeconfig
       mountPath: /opt/kubeconfig
+    dashboards:
+    - name: Docs
+      url: https://docs.educates.dev/
     objects:
     - apiVersion: v1
       kind: Secret
@@ -68,11 +56,12 @@ spec:
       stringData:
         values.yaml: |
           vcluster:
-            image: rancher/k3s:v1.25.3-k3s1
+            image: rancher/k3s:v1.29.0-k3s1
           syncer:
             extraArgs:
             - --tls-san=admin-vcluster.$(session_namespace).svc.$(cluster_domain)
             - --out-kube-config-server=https://admin-vcluster.$(session_namespace).svc.$(cluster_domain)
+            - --kube-config-context-name=admin
           mapServices:
             fromHost:
             - from: $(workshop_namespace)/registry-$(session_name)
@@ -82,6 +71,8 @@ spec:
           sync:
             ingresses:
               enabled: true
+          exportKubeConfig:
+            context: "admin"
     - apiVersion: kappctrl.k14s.io/v1alpha1
       kind: App
       metadata:
@@ -96,6 +87,7 @@ spec:
             name: vcluster
             repository:
               url: https://charts.loft.sh
+            version: "0.19.9"
         template:
         - helmTemplate:
             name: admin-vcluster
@@ -139,40 +131,12 @@ spec:
               - $(workshop_namespace)
           targetSecret:
             name: $(session_name)-kubeconfig
-    - apiVersion: v1
-      kind: Service
-      metadata:
-        name: registry-$(session_name)
-        namespace: $(workshop_namespace)
-      spec:
-        type: ClusterIP
-        selector:
-          deployment: $(session_name)
-        ports:
-        - name: registry
-          port: 80
-          protocol: TCP
-          targetPort: 5001
-    - apiVersion: v1
-      kind: Service
-      metadata:
-        name: localhost-$(session_name)
-        namespace: $(workshop_namespace)
-      spec:
-        type: ClusterIP
-        selector:
-          deployment: $(session_name)
-        ports:
-        - name: renderer
-          port: 10081
-          protocol: TCP
-          targetPort: 10081
   environment:
     images:
       registries:
       - content:
-        - destination: /educates-client-programs
-          prefix: /jorgemoralespou/educates-client-programs
+        - destination: educates
+          prefix: /educates/educates-extension-packages/educates
           stripPrefix: true
         onDemand: true
         urls:

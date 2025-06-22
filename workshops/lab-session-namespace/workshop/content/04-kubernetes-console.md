@@ -1,6 +1,6 @@
-+++
-title = 'Kubernetes Console'
-+++
+---
+title: Kubernetes Console
+---
 
 To provide a visual way of viewing workloads deployed to the Kubernetes cluster
 an embeded Kubernetes console can be enabled.

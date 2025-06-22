@@ -15,6 +15,17 @@ spec:
         includePaths:
           - /resources/**
           - /workshop/**
+    packages:
+      - name: educates
+        files:
+          - path: .
+            image:
+              url: ghcr.io/educates/educates-extension-packages/educates:v3.3.2
+      - name: spring-academy-vscode-tools-via-overlay
+        files:
+          - path: .
+            image:
+              url: ghcr.io/educates/educates-extension-packages/vscode-java-tools-oci-overlay:v0.29.2
   session:
     namespaces:
       budget: medium
@@ -22,5 +33,7 @@ spec:
       terminal:
         enabled: true
         layout: split
+      editor:
+        enabled: true
       files:
         enabled: true

@@ -13,6 +13,7 @@ spec:
       - image:
           url: "$(image_repository)/labs-educates-showcase/lab-ingress-proxy-files:$(workshop_version)"
         includePaths:
+          - /exercises/**        
           - /resources/**
           - /workshop/**
   session:
@@ -24,3 +25,9 @@ spec:
         layout: split
       files:
         enabled: true
+    ingresses:
+    - name: application
+      port: 8001
+    dashboards:
+    - name: application
+      url: "$(ingress_protocol)://application-$(session_namespace).$(ingress_domain)/"          

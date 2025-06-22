@@ -1,6 +1,6 @@
-+++
-title = 'User input'
-+++
+---
+title: User input
+---
 
 We will create a pod with the user provided name
 

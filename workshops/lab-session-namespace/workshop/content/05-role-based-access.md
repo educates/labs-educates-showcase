@@ -1,6 +1,6 @@
-+++
-title = 'Role Based Access'
-+++
+---
+title: Role Based Access
+---
 
 Even though a workshop user has access to the namespace created just for their
 workshop session, access can be restricted further based on roles.
